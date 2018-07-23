@@ -1,0 +1,20 @@
+									---------download Scenario---------
+command: -download
+data required: file_path, server_name, port_number
+In this scenario we will download files. The client will request file_path(meaning the ENTIRE file) from server_name listening on oprt_number. Note that the file belonging to file_path is on the server's machine.
+
+
+ 
+									--------upload Scenario---------
+command: -upload
+data required: file_path, server_name, port_number
+In this scenario we will upload files to  server_name. This file will be file_path, which is a file that is sitting on the client's machine. The upload request will be sent to server_name listening on port_number. Please note that this file_path can come from ANY location on the client's machine. As opposed to downloads request, the location(directory) where files are fecthed from is pre-determined by the server--the aformentioned location is "~/A Better Open/net_server/test_files"--EVERY file that is accessed by clients is stored in this location.
+
+
+
+
+									---------cat_net Scenario---------
+
+commmand: -cat_net
+data required: file_path, server_name, port_number
+This scenario is very similar to download. Only that instead of writing the data from file_path to some file in the client's machine, cat_net will write this data to stdout. Essentially this is cat(the linux command)...but over the network!
